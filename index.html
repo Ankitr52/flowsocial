@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowSocial - Events</title>
+</head>
+<body>
+    <h1>Welcome to FlowSocial</h1>
+    <a href="{{ url_for('register') }}">Register</a> |
+    <a href="{{ url_for('add_event') }}">Add Event</a>
+    <h2>Available Events</h2>
+    <ul>
+        {% for event in events %}
+            <li>{{ event.name }} - {{ event.date }} - {{ event.location }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
